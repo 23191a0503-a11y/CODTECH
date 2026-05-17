@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Weather App</title>
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="background"></div>
+
+  <!-- Main Container -->
+  <div class="app-container">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>🌤 Weather App</h1>
+
+      <div class="top-actions">
+        <!-- Dark Mode -->
+        <button id="themeToggle" class="icon-btn">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Location -->
+        <button id="locationBtn" class="icon-btn">
+          <i class="fas fa-location-dot"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Search -->
+    <div class="search-section">
+      <input
+        type="text"
+        id="cityInput"
+        placeholder="Search city..."
+      />
+
+      <button id="searchBtn">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Loading -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Error Message -->
+    <p id="errorMsg" class="error-msg"></p>
+
+    <!-- Weather Card -->
+    <div class="weather-card hidden" id="weatherCard">
+
+      <!-- Main Weather -->
+      <div class="main-weather">
+
+        <div class="left">
+          <h2 id="cityName">City</h2>
+          <p id="dateTime">Date & Time</p>
+
+          <div class="temp-row">
+            <h1 id="temperature">--°C</h1>
+            <img id="weatherIcon" src="" alt="weather" />
+          </div>
+
+          <h3 id="condition">Condition</h3>
+        </div>
+
+        <div class="right">
+          <div class="info-box">
+            <i class="fas fa-temperature-half"></i>
+            <p>Feels Like</p>
+            <span id="feelsLike">--°C</span>
+          </div>
+
+          <div class="info-box">
+            <i class="fas fa-droplet"></i>
+            <p>Humidity</p>
+            <span id="humidity">--%</span>
+          </div>
+
+          <div class="info-box">
+            <i class="fas fa-wind"></i>
+            <p>Wind</p>
+            <span id="windSpeed">-- km/h</span>
+          </div>
+
+          <div class="info-box">
+            <i class="fas fa-gauge-high"></i>
+            <p>Pressure</p>
+            <span id="pressure">-- hPa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sunrise Sunset -->
+      <div class="sun-section">
+
+        <div class="sun-card">
+          <i class="fas fa-sun"></i>
+          <p>Sunrise</p>
+          <span id="sunrise">--</span>
+        </div>
+
+        <div class="sun-card">
+          <i class="fas fa-moon"></i>
+          <p>Sunset</p>
+          <span id="sunset">--</span>
+        </div>
+
+      </div>
+
+      <!-- 5 Day Forecast -->
+      <h2 class="forecast-title">5-Day Forecast</h2>
+
+      <div class="forecast-container" id="forecastContainer">
+        <!-- JS Data -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
