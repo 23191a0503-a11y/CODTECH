@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Firebase Chat App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login">
+  <input type="text" id="username" placeholder="Enter Username">
+  <button onclick="joinChat()">Join Chat</button>
+</div>
+
+<div class="chat-container" style="display:none;">
+  <h2>Real-Time Chat Application</h2>
+
+  <div id="messages"></div>
+
+  <div class="input-area">
+    <input type="text" id="messageInput" placeholder="Type message">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
